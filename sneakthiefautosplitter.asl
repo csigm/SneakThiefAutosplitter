@@ -2,7 +2,7 @@ state("SneakThief01")
 {
     uint mnchek: 0x101EE68, 0x0, 0x230, 0x14, 0xAC8;
     uint lngchek: 0x1023B40, 0x58;
-    uint lvlnd: "mono.dll", 0x020B914, 0x10, 0xD4, 0xC, 0x10, 0x8, 0x434;
+    uint lvlnd: 0x02BDC64, 0x638, 0x3A8, 0x8, 0x390;
 }
 
 start
@@ -34,5 +34,13 @@ isLoading
     else
     {
         return false;
+    }
+}
+
+reset
+{
+    if (current.rseeet > 0 && old.rseeet == 0)
+    {
+        return true;
     }
 }
