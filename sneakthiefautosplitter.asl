@@ -1,13 +1,14 @@
 state("SneakThief01")
 {
     uint mnchek: 0x101EE68, 0x0, 0x230, 0x14, 0xAC8;
-    uint lngchek: 0x1023B40, 0x58;
-    uint lvlnd: 0x02BDC64, 0x638, 0x3A8, 0x8, 0x390;
+    uint lngchek: 0x0FD3808, 0x20, 0x24, 0x180, 0x7D4;
+    uint lvlnd: "mono.dll", 0x01F5964, 0x30, 0xBF0, 0x14, 0x10, 0x3C, 0x20, 0x434;
+    uint mnycunt: 0x102FFE0, 0x10, 0x4, 0x24, 0x8, 0xC, 0xC, 0x24;
 }
 
 start
 {
-    if (current.lngchek == 0 && old.lngchek != 0)
+    if (current.mnchek == 1 && old.mnchek != 1)
     {
         return true;
     }
@@ -15,31 +16,7 @@ start
 
 split
 {
-    if (current.lvlnd > 0 && old.lvlnd == 0)
-    {
-        return true;
-    }
-}
-
-isLoading
-{
-    if (current.lvlnd > 0)
-    {
-        return true;
-    }
-    if (current.mnchek == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-reset
-{
-    if (current.rseeet > 0 && old.rseeet == 0)
+    if (current.lvlnd > 0 && old.lvlnd == 0 && current.mnycunt != 0)
     {
         return true;
     }
