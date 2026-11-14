@@ -19,11 +19,15 @@ start
 
 split
 {
-    if (current.lvlnd22222 > 0 && old.lvlnd22222 == 0)
+    if (current.lvlnd22222 > 0 && old.lvlnd22222 == 0 && current.mnycunt > 0)
     {
         return true;
     }
-    if (current.lvlnd11111 > 0 && old.lvlnd11111 == 0)
+    if (current.lvlnd11111 > 0 && old.lvlnd11111 == 0 && current.mnycunt > 0)
+    {
+        return true;
+    }
+    if (current.lvlonecount > 0 && current.lvlnd22222 > 0 && old.lvlnd22222 == 0 )
     {
         return true;
     }
