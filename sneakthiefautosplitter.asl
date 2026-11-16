@@ -7,11 +7,12 @@ state("SneakThief01")
     uint lvlonecount: 0x1064160, 0x20, 0x0, 0x14, 0x1EC, 0xB34;
     uint lvlnd22222: 0x1037CE8, 0x50, 0xD4, 0xC, 0x18, 0x38, 0x474;
     uint mnchek22222: 0x101FDDC;
+    float timrcount: 0x0FD3828, 0x78, 0xF8, 0x490;
 }
 
 start
 {
-    if (current.lngchek == 0 && old.lngchek == 1)
+    if (current.lngchek == 0 && old.lngchek == 1 && current.mnchek != 0)
     {
         return true;
     }
@@ -19,15 +20,15 @@ start
 
 split
 {
-    if (current.lvlnd22222 > 0 && old.lvlnd22222 == 0 && current.mnycunt > 0)
+    if (current.lvlnd22222 > 0 && old.lvlnd22222 == 0 && current.timrcount > 10.0)
     {
         return true;
     }
-    if (current.lvlnd11111 > 0 && old.lvlnd11111 == 0 && current.mnycunt > 0)
+    if (current.lvlnd11111 > 0 && old.lvlnd11111 == 0 && current.timrcount > 10.0)
     {
         return true;
     }
-    if (current.lvlonecount > 0 && current.lvlnd22222 > 0 && old.lvlnd22222 == 0 )
+    if (current.lvlnd22222 > 0 && old.lvlnd22222 == 0 && current.lvlonecount > 0)
     {
         return true;
     }
